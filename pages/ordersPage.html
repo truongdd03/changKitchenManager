@@ -6,9 +6,10 @@
         <link rel="stylesheet" type="text/css" href="../css/ordersPage.css">
 
         <script src="../js/topNavBar.js"></script>
+        <script src="../js/ordersPage.js"></script>
     </head>
 
-    <body onload="clickedOrders();">
+    <body onload="clickedOrders(); load();">
 
         <div class="TopNavBar">
 
@@ -36,48 +37,11 @@
 
         </div>
 
-        <div class="MainPage">
+        <div class="MainPage" id="Main">
 
             <p class="Title">Orders</p>
-            <a class="OrdersWrapper" href="order.html">
-
-                <div class="OrderWrapper">
-                    
-                    <div class="OrderInformation">
-                        <p>#023123</p>
-                    </div>
-    
-                    <div class="OrderInformation">
-                        <p>Truong Dinh Dong</p>
-                    </div>
-    
-                    <div class="OrderPrice">
-                        <p>$224</p>
-                    </div>
-    
-                </div>
-
-            </a>
-
-            <a class="OrdersWrapper" href="order.html">
-
-                <div class="OrderWrapper">
-                    
-                    <div class="OrderInformation">
-                        <p>#023123</p>
-                    </div>
-    
-                    <div class="OrderInformation">
-                        <p>Truong Dinh Dong</p>
-                    </div>
-    
-                    <div class="OrderPrice">
-                        <p>$224</p>
-                    </div>
-    
-                </div>
-
-            </a>
+            <!--Orders will appear here-->
+            
         </div>
 
     </body>
