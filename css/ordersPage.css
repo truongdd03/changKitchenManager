@@ -1,0 +1,35 @@
+.OrderWrapperWrapper:focus, .OrderWrapperWrapper:hover {
+    background-color: gray;
+}
+
+.OrderWrapper {
+    border: 2px solid orange;
+    height: 50px;
+
+    vertical-align: middle;
+
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 2px;
+}
+
+.OrderWrapper:focus, .OrderWrapper:hover {
+    background-color: rgb(245, 228, 200);
+}
+
+.OrderInformation, .OrderPrice {
+    height: 50px;
+    line-height: 50px;
+
+    float: left;
+    margin-left: 50px;
+
+    color: orange;
+    font-size: 150%;
+}
+
+.OrderPrice {
+    float: right;
+    color: green;
+    margin-right: 50px;
+}

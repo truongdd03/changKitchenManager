@@ -1,0 +1,24 @@
+/* Main page */
+.MenuTitle {
+    text-align: center;
+}
+
+.DatePicker {
+    font-size: 125%;
+}
+
+.Dishes {
+    float: left;
+    border: 5px solid orange;
+    height: 400px;
+    width: 300px;
+    margin: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 5%;
+}
+
+.DishesTitle {
+    font-size: 200%;
+}
