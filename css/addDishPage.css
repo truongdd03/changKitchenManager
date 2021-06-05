@@ -1,18 +1,43 @@
 .Dishes {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20px;
+    margin: 20px 10% 0px 10%;
+}
 
+.MainPage {
+    text-align: center;
+}
+
+.SearchField {
+    border-radius: 10px; border: 2px solid gray;
+    height: 40px; width: 1000px;
+    padding: 0px 10px 0px 10px; margin: 10px 10px -10px 10px;
+    font-size: 125%;
 }
 
 .DishWrapper {
-    border: 2px solid orange;
-
-    height: 300px;
-    width: 260px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 24px;
-
-    float: left;
+    border: 3px solid orange; border-radius: 10%;
+    height: 300px; width: 260px;
+    margin: 10px 11px 0px 11px;
+    text-align: center; float: left;
 }
+
+.Image {
+    border-radius: 10%;
+    margin: 10px;
+    height: 175px; width: 200px;
+    object-fit: cover;
+}
+
+.Name, .Price {
+    margin: 0px 10px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Name {
+    color: orange;
+    font-size: 170%;
+}
+
+.Price {
+    font-size: 150%;
+}
+

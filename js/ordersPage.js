@@ -1,7 +1,7 @@
 var currentID = -1;
 
 function load() {
-    for (i = 0; i < 20; i++) {
+    for (i = 0; i < 10; i++) {
 
         var div = document.createElement('div');
         div.className = "OrderWrapper";
@@ -10,6 +10,7 @@ function load() {
         div.innerHTML = div.innerHTML + '<p class="OrderInformation">#123212<\p>';
         div.innerHTML = div.innerHTML + '<p class="OrderInformation">Truong Dinh Dong<\p>';
         div.innerHTML = div.innerHTML + '<p class="OrderPrice">$123<\p>';
+        div.innerHTML = div.innerHTML + '<p class="OrderStatus">Completed<\p>';
 
         div.onclick = (function(i) { 
             return function() { 
@@ -19,10 +20,6 @@ function load() {
 
         document.getElementById("OrdersWrapper").append(div);
     }
-}
-
-function print(i) {
-    console.log(i);
 }
 
 function clicked(id) {

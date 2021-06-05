@@ -4,8 +4,7 @@
 
 .OrdersWrapper, .DishesWrapper {
     float: left;
-    width: 44%;
-    height: 70%;
+    width: 44%; height: 70%;
     margin-left: 5%;
     overflow: scroll;
     border: 2px solid gray;
@@ -13,43 +12,37 @@
 
 .DishesWrapper {
     float: right;
-    margin-left: auto;
-    margin-right: 5%;
+    margin-left: auto; margin-right: 5%;
 }
 
 .OrderWrapper {
     border-bottom: 2px solid orange;
     height: 50px;
-
     vertical-align: middle;
-
+    background-color: white;
 }
 
-.OrderWrapper:focus, .OrderWrapper:hover {
-    background-color: rgb(245, 228, 200);
-}
-
-.OrderInformation, .OrderPrice {
+.OrderInformation, .OrderPrice, .OrderStatus {
     margin-left: 30px;
-    height: 50px;
-    line-height: 50px;
-
+    height: 50px; line-height: 50px;
     float: left;
-
     color: orange;
     font-size: 150%;
 }
 
 .OrderPrice {
-    float: right;
     color: green;
+    float: right;
     margin-right: 30px;
+    width: 70px;
+}
+
+.OrderStatus {
+    color: black;
+    float: right;
 }
 
 .OrderDish {
-    height: 30px;
-    line-height: 30px;
-
-    color: orange;
-    font-size: 125%;
+    height: 30px; line-height: 30px;
+    color: orange; font-size: 125%;
 }

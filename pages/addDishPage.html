@@ -6,10 +6,11 @@
         <link rel="stylesheet" type="text/css" href="../css/addDishPage.css">
 
         <script src="../js/topNavBar.js"></script>
+        <script src="../js/addDishPage.js"></script>
         
     </head>
 
-    <body onload="clickedAddDish();">
+    <body onload="clickedAddDish(); load();">
 
         <div class="TopNavBar">
 
@@ -41,9 +42,14 @@
 
             <p class="Title">Dishes</p>
 
-            <div class="Dishes" id="Dish">
+            <input class="SearchField" placeholder="Type to search">
+
+            <div class="Dishes" id="Dishes">
                 
                 <div class="DishWrapper">
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/ae3qqfev6j7hzhxw6if3" class="Image">
+                    <p class="Name">Chocolate Ice-cream</p>
+                    <p class="Price">$100</p>
                 </div>
                 
             </div>

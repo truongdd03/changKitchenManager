@@ -11,7 +11,7 @@ p {
     text-align: center;
     color: orange;
     font-size: 200%;
-    margin-top: 50px;
+    margin-top: 50px; margin-bottom: 20px;
 }
 
 /* Top navigation bar */

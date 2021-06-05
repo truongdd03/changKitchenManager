@@ -9,14 +9,10 @@
 
 .Dishes {
     float: left;
-    border: 5px solid orange;
-    height: 400px;
-    width: 300px;
-    margin: 25px;
+    border: 5px solid orange; border-radius: 5%;
+    height: 400px; width: 300px;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    border-radius: 5%;
+    margin: 10px 25px 50px 25px;
 }
 
 .DishesTitle {
