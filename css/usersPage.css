@@ -1,12 +1,18 @@
+.SearchField {
+    border-radius: 10px; border: 2px solid gray;
+    height: 40px; width: 1000px;
+    padding: 0px 10px 0px 10px; margin: 0px 10px 10px 10px;
+    font-size: 125%;
+}
+
 .UserWrapper {
     margin: 0px 10% 2px 10%;
     border: 2px solid orange;
     height: 50px;line-height: 50px;
     vertical-align: middle;
-    text-align: center;
 }
 
-.Name, .Orders, .Rank {
+.Name, .Phone, .Rank {
     height: 50px; line-height: 50px;
     font-size: 150%;
 }
@@ -17,14 +23,23 @@
     color: orange;
 }
 
+.Phone {
+    width: 200px;
+    margin-left: 300px;
+    float: left;
+    color: black;
+}
+
 .Rank {
     width: 200px;
-    margin: 0px 30px 0px 200px;
+    margin-right: 30px;
     float: right;
     color: gray;
 }
 
-.Orders {
+.BinImage {
+    height: 30px; width: 30px;
     float: right;
-    color: black;
+    margin: 10px;
+    object-fit: cover;
 }

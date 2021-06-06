@@ -1,16 +1,43 @@
-.Dishes {
-    margin: 20px 10% 0px 10%;
+.MainPage {
+    text-align: center;
 }
 
-.MainPage {
+
+
+.MiddleWrapper {
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
     text-align: center;
 }
 
 .SearchField {
     border-radius: 10px; border: 2px solid gray;
-    height: 40px; width: 1000px;
-    padding: 0px 10px 0px 10px; margin: 10px 10px -10px 10px;
+    height: 40px; width: 800px;
+    padding: 0px 10px 0px 10px; margin: 0px 0px 10px 15%;
     font-size: 125%;
+}
+
+.AddButton, .EditButton {
+    width: 50px;
+    font-size: 150%;
+}
+
+.AddButton {
+    color: green;
+    float: right;
+    margin: 0px 10px 0px 5px;
+}
+
+.EditButton {
+    color: red;
+    float: right;
+    margin-right: 15%;
+}
+
+
+.Dishes {
+    margin: 0px 10% 0px 10%;
 }
 
 .DishWrapper {

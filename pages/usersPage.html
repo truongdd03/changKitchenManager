@@ -2,13 +2,16 @@
     <head>
         <title>changskitchen</title>
 
-        <link rel="stylesheet" type="text/css" href="../css/topNavStyle.css">
+        <link rel="stylesheet" type="text/css" href="../css/support/topNavStyle.css">
+        <link rel="stylesheet" type="text/css" href="../css/support/searchField.css">
         <link rel="stylesheet" type="text/css" href="../css/usersPage.css">
 
-        <script src="../js/topNavBar.js"></script>
+        <script src="../js/support/topNavBar.js"></script>
+        <script src="../js/usersPage.js"></script>
+
     </head>
 
-    <body onload="clickedUsers();">
+    <body onload="clickedUsers(); load();">
 
         <div class="TopNavBar">
 
@@ -37,14 +40,18 @@
         </div>
 
         <div class="MainPage">
+
             <p class="Title">Users</p>
 
-            <div class="Users">
+            <input class="SearchField" placeholder="Type to search">
+
+            <div class="UsersWrapper" id="UsersWrapper">
 
                 <div class="UserWrapper">
                     <p class="Name">Truong Dinh Dong</p>
+                    <p class="Phone">0911099706</p>
+                    <img class="BinImage" src="../images/bin.jpg">
                     <p class="Rank">Loyal User</p>
-                    <p class="Orders">Number of Orders: 20</p>
                 </div>
 
             </div>
