@@ -1,4 +1,4 @@
-//import MenuDishes from './class/MenuDishes'
+//import {MenuDishes} from './class/MenuDishes';
 
 //var filteredList = [MenuDishes]();
 function load() {
