@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>changskitchen</title>
+
+        <link rel="stylesheet" type="text/css" href="/support/css/topNavStyle.css">
+        <link rel="stylesheet" type="text/css" href="/support/css/searchField.css">
+        <link rel="stylesheet" type="text/css" href="./addDishPage.css">
+
+        <script src="/support/js/topNavBar.js"></script>
+        <script type="module" src="./addDishPage.js"></script>
+        
+    </head>
+
+    <body onload="clickedAddDish(); load();">
+
+        <div class="TopNavBar">
+
+            <div class="HeadingWrapper">
+                <p class="Heading">Chang's Kitchen</p>
+            </div>
+
+            <div class="Buttons"> 
+                <a class="ButtonWrapper" href="../addDishPage/addDishPage.html" id="AddDish">
+                    <p class="ButtonTitle">Add dish</p>
+                </a>
+
+                <a class="ButtonWrapper" href="../usersPage/usersPage.html" id="Users">
+                    <p class="ButtonTitle">Users</p>
+                </a>
+
+                <a class="ButtonWrapper" href="../ordersPage/ordersPage.html" id="Orders">
+                    <p class="ButtonTitle">Orders</p>
+                </a>
+
+                <a class="ButtonWrapper" href="../menuPage/menuPage.html" id="Menu">
+                    <p class="ButtonTitle">Menu</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="MainPage">
+
+            <p class="Title">Dishes</p>
+
+            <div class="MiddleWrapper">
+                <input class="SearchField" placeholder="Type to search">
+                <p class="EditButton">Edit</p>
+                <p class="AddButton">Add</p>    
+            </div>
+        
+            <div class="Dishes" id="Dishes">
+                
+                <div class="DishWrapper">
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/ae3qqfev6j7hzhxw6if3" class="Image">
+                    <p class="Name">Chocolate Ice-cream</p>
+                    <p class="Price">$100</p>
+                </div>
+                
+            </div>
+
+        </div>
+    </body>
+</html>

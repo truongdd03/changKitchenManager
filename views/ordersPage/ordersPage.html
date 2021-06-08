@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>changskitchen</title>
+
+        <link rel="stylesheet" type="text/css" href="/support/css/topNavStyle.css">
+        <link rel="stylesheet" type="text/css" href="./ordersPage.css">
+
+        <script src="/support/js/topNavBar.js"></script>
+        <script src="./ordersPage.js"></script>
+    </head>
+
+    <body onload="clickedOrders(); load();">
+
+        <div class="TopNavBar">
+
+            <div class="HeadingWrapper">
+                <p class="Heading">Chang's Kitchen</p>
+            </div>
+
+            <div class="Buttons"> 
+                <a class="ButtonWrapper" href="../addDishPage/addDishPage.html" id="AddDish">
+                    <p class="ButtonTitle">Add dish</p>
+                </a>
+
+                <a class="ButtonWrapper" href="../usersPage/usersPage.html" id="Users">
+                    <p class="ButtonTitle">Users</p>
+                </a>
+
+                <a class="ButtonWrapper" href="../ordersPage/ordersPage.html" id="Orders">
+                    <p class="ButtonTitle">Orders</p>
+                </a>
+
+                <a class="ButtonWrapper" href="../menuPage/menuPage.html" id="Menu">
+                    <p class="ButtonTitle">Menu</p>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="MainPage" id="Main">
+
+            <p class="Title">Orders</p>
+
+            <div class="OrdersWrapper" id="OrdersWrapper">
+                <!--Orders will appear here-->
+            </div>
+
+            <div class="DishesWrapper" id="DishesWrapper">
+                
+            </div>
+            
+        </div>
+
+    </body>
+</html>
