@@ -1,5 +1,3 @@
-import MenuDishes from '/support/js/class/MenuDishes.js';
-
 function load() {
     for (i = 0; i < 10; ++i) {
 

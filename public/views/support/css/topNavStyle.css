@@ -10,7 +10,7 @@ p {
     font-weight: bold;
     text-align: center;
     color: orange;
-    font-size: 200%;
+    font-size: 250%;
     margin-top: 50px; margin-bottom: 20px;
 }
 
@@ -36,7 +36,7 @@ p {
     text-align: center;
     border-radius: 25px;
 
-    background-color: white;
+    background-color: rgb(240, 233, 192);
 }
 
 .Heading {

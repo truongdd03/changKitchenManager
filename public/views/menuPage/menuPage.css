@@ -4,7 +4,10 @@
 }
 
 .DatePicker {
-    font-size: 125%;
+    background-color: rgb(238, 228, 174);
+    font-size: 150%;
+    border: none;
+    color: black;
 }
 
 .Dishes {
