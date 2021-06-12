@@ -26,6 +26,13 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+	<!--Firebase-->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+
 </head>
 <body>
 	
@@ -38,18 +45,18 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="Email" id="Email">
+						<input class="input100" type="text" name="email" placeholder="Email" id="email">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
-					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password" id="Password">
+					<div class="wrap-input100 rs1 validate-input" data-validate="Invalid email or password">
+						<input class="input100" type="password" name="pass" placeholder="Password" id="password">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>
 
-					<div class="container-login100-form-btn m-t-20">
+					<div class="container-login100-form-btn m-t-20" onclick="signIn();">
 						<button class="login100-form-btn">
 							Sign in
 						</button>

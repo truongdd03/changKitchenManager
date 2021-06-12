@@ -3,11 +3,11 @@
         <title>changskitchen</title>
 
         <link rel="stylesheet" type="text/css" href="../support/css/topNavStyle.css">
-        <link rel="stylesheet" type="text/css" href="./menuPage.css">
+        <link rel="stylesheet" type="text/css" href="./ordersPage.css">
 
         <script src="../support/js/topNavBar.js"></script>
-        <script src="./menuPage.js"></script>
-        
+        <script src="./ordersPage.js"></script>
+
 
         <!--
         <link rel="stylesheet" type="text/css" href="../support/css/canvas.css">
@@ -15,9 +15,14 @@
         <script src="../support/js/canvas.js"></script>
         -->
 
+        <!--Firebase-->
+    	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
     </head>
 
-    <body onload="clickedMenu();">
+    <body onload="clickedOrders(); load();">
 
         <div class="TopNavBar">
 
@@ -45,33 +50,19 @@
 
         </div>
 
-        <div class="MainPage">
-            <div class="Menu">
+        <div class="MainPage" id="Main">
 
-                <div class="MenuTitle">
-                    <p class="Title" id="currentDate">Today's Menu</p> 
-                    <input class="DatePicker" id="newDate" type="date" onblur="updateDate();">
-                </div>
+            <p class="Title">Orders</p>
 
-                <div class="Dishes">
-                    <p class="DishesTitle">Appetizer</p>
-                </div>
-
-                <div class="Dishes">
-                    <p class="DishesTitle">Soup</p>
-                </div>
-
-                <div class="Dishes">
-                    <p class="DishesTitle">Main</p>
-                </div>
-
-                <div class="Dishes">
-                    <p class="DishesTitle">Dessert</p>
-                </div>
-
+            <div class="OrdersWrapper" id="OrdersWrapper">
+                <!--Orders will appear here-->
             </div>
-        </div>
 
+            <div class="DishesWrapper" id="DishesWrapper">
+                
+            </div>
+            
+        </div>
 
     </body>
 </html>

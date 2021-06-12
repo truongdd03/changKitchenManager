@@ -1,10 +1,19 @@
-import { firestore } from '/public/views/support/js/firebase.js';
+var firebaseConfig = {
+    apiKey: "AIzaSyBRbiFdYbI13Ar2lOru5-HqMFSkf3rHDKM",
+    authDomain: "eshop-358c5.firebaseapp.com",
+    databaseURL: "https://eshop-358c5-default-rtdb.firebaseio.com",
+    projectId: "eshop-358c5",
+    storageBucket: "eshop-358c5.appspot.com",
+    messagingSenderId: "844303338405",
+    appId: "1:844303338405:web:0eb9dbf5cc44913bd8b64c",
+    measurementId: "G-M47CJ32FGP"
+  };
 
-const firebaseui = require('firebaseui');
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 (function ($) {
     "use strict";
-
 
     /*==================================================================
     [ Validate ]*/
@@ -20,6 +29,13 @@ const firebaseui = require('firebaseui');
             }
         }
 
+        //if (check == true) {
+           
+        //}
+
+        if (check == true) {
+            window.alert("Congrats!")
+        }
         return check;
     });
 
@@ -33,6 +49,7 @@ const firebaseui = require('firebaseui');
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                
                 return false;
             }
         }
@@ -58,3 +75,24 @@ const firebaseui = require('firebaseui');
     
 
 })(jQuery);
+
+function signIn() {
+    var check = true;
+
+    console.log("yeal")
+    var email = $("#email").val();
+    var password = $("#password").val();
+
+    var result = firebase.auth().signInWithEmailAndPassword(email, password);
+    result.catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        
+        check = false
+        window.alert(errorMessage);
+    });
+
+    if (check) {
+        window.alert("Congrats!");
+    }
+}

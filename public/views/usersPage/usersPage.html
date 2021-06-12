@@ -3,20 +3,26 @@
         <title>changskitchen</title>
 
         <link rel="stylesheet" type="text/css" href="../support/css/topNavStyle.css">
-        <link rel="stylesheet" type="text/css" href="./ordersPage.css">
+        <link rel="stylesheet" type="text/css" href="../support/css/searchField.css">
+        <link rel="stylesheet" type="text/css" href="./usersPage.css">
 
         <script src="../support/js/topNavBar.js"></script>
-        <script src="./ordersPage.js"></script>
-
+        <script src="./usersPage.js"></script>
 
         <!--
         <link rel="stylesheet" type="text/css" href="../support/css/canvas.css">
         <canvas></canvas>
         <script src="../support/js/canvas.js"></script>
         -->
+
+    	<!--Firebase-->
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
     </head>
 
-    <body onload="clickedOrders(); load();">
+    <body onload="clickedUsers(); load();">
 
         <div class="TopNavBar">
 
@@ -44,19 +50,22 @@
 
         </div>
 
-        <div class="MainPage" id="Main">
+        <div class="MainPage">
 
-            <p class="Title">Orders</p>
+            <p class="Title">Users</p>
 
-            <div class="OrdersWrapper" id="OrdersWrapper">
-                <!--Orders will appear here-->
+            <input class="SearchField" placeholder="Type to search">
+
+            <div class="UsersWrapper" id="UsersWrapper">
+
+                <div class="UserWrapper">
+                    <p class="Name">Truong Dinh Dong</p>
+                    <p class="Phone">0911099706</p>
+                    <img class="BinImage" src="/support/images/bin.jpg">
+                    <p class="Rank">Loyal User</p>
+                </div>
+
             </div>
-
-            <div class="DishesWrapper" id="DishesWrapper">
-                
-            </div>
-            
         </div>
-
     </body>
 </html>

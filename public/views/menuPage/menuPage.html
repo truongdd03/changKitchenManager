@@ -3,20 +3,28 @@
         <title>changskitchen</title>
 
         <link rel="stylesheet" type="text/css" href="../support/css/topNavStyle.css">
-        <link rel="stylesheet" type="text/css" href="../support/css/searchField.css">
-        <link rel="stylesheet" type="text/css" href="./usersPage.css">
+        <link rel="stylesheet" type="text/css" href="./menuPage.css">
 
         <script src="../support/js/topNavBar.js"></script>
-        <script src="./usersPage.js"></script>
+        <script src="./menuPage.js"></script>
+        
 
         <!--
         <link rel="stylesheet" type="text/css" href="../support/css/canvas.css">
         <canvas></canvas>
         <script src="../support/js/canvas.js"></script>
         -->
+
+        
+        <!--Firebase-->
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+
     </head>
 
-    <body onload="clickedUsers(); load();">
+    <body onload="clickedMenu();">
 
         <div class="TopNavBar">
 
@@ -45,21 +53,32 @@
         </div>
 
         <div class="MainPage">
+            <div class="Menu">
 
-            <p class="Title">Users</p>
+                <div class="MenuTitle">
+                    <p class="Title" id="currentDate">Today's Menu</p> 
+                    <input class="DatePicker" id="newDate" type="date" onblur="updateDate();">
+                </div>
 
-            <input class="SearchField" placeholder="Type to search">
+                <div class="Dishes">
+                    <p class="DishesTitle">Appetizer</p>
+                </div>
 
-            <div class="UsersWrapper" id="UsersWrapper">
+                <div class="Dishes">
+                    <p class="DishesTitle">Soup</p>
+                </div>
 
-                <div class="UserWrapper">
-                    <p class="Name">Truong Dinh Dong</p>
-                    <p class="Phone">0911099706</p>
-                    <img class="BinImage" src="/support/images/bin.jpg">
-                    <p class="Rank">Loyal User</p>
+                <div class="Dishes">
+                    <p class="DishesTitle">Main</p>
+                </div>
+
+                <div class="Dishes">
+                    <p class="DishesTitle">Dessert</p>
                 </div>
 
             </div>
         </div>
+
+
     </body>
 </html>
