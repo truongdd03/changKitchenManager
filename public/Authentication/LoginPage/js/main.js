@@ -18,14 +18,12 @@ function logIn() {
     
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
                 
-        console.log("YEAH")
-        window.location.replace("../menuPage/menuPage.html");
         window.alert("Welcome back, Chang!");
+        window.location = "/views/menuPage/menuPage.html";
 
     }).catch(function(error) {
 
         var errorMessage = error.message;
-        console.log(errorMessage);
         window.alert(errorMessage);
 
         if (!errorMessage.includes("restore")) {
