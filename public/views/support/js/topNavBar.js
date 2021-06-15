@@ -13,3 +13,7 @@ function clickedOrders() {
 function clickedUsers() {
     document.getElementById("Users").style.backgroundColor = "rgb(236, 179, 72)";
 }
+
+function logOut() {
+    window.location = "/public/Authentication/LoginPage/LoginPage.html";
+}

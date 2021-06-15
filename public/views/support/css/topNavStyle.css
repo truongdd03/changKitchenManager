@@ -1,9 +1,12 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
 * {
     margin: 0;
 }
 
 p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
 }
 
 .Title {
@@ -16,12 +19,24 @@ p {
 
 /* Top navigation bar */
 .TopNavBar {
-    height: 70px;
-    line-height: 70px;
-
+    height: 70px; line-height: 70px;
+    vertical-align: middle;
     background-color: orange;
-
     position: relative;
+}
+
+.fa {
+    display: block; position: absolute;
+    top: 50%; right: 30px; transform: translate(0%, -50%);
+    margin-left: 30px;
+    height: 30px; width: 30px; line-height: 30px;
+    text-rendering: auto;
+}
+
+.fa-sign-out-alt::before {
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(255, 253, 253); 
 }
 
 .HeadingWrapper {
@@ -30,9 +45,7 @@ p {
     top: 50%; left: 100px;
     transform: translate(0%,-50%);
 
-    height: 50;
-    width: 220px;
-    line-height: 50px;
+    height: 50; width: 220px; line-height: 50px;
     text-align: center;
     border-radius: 25px;
 
@@ -47,7 +60,7 @@ p {
 .Buttons {
     display: block;
     position: absolute;
-    top: 50%; right: 30px;
+    top: 50%; right: 90px;
     transform: translate(0%, -50%);
     height: 70;
 }
