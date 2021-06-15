@@ -2,13 +2,18 @@
     <head>
         <title>changskitchen</title>
 
+        <!--Firebase-->
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+
         <link rel="stylesheet" type="text/css" href="../support/css/topNavStyle.css">
         <link rel="stylesheet" type="text/css" href="../support/css/searchField.css">
         <link rel="stylesheet" type="text/css" href="./addDishPage.css">
 
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="../support/js/topNavBar.js"></script>
-        <script src="/public/views/support/js/class/MenuDishes.js"></script>
         <script src="./addDishPage.js"></script>
         
 
@@ -17,12 +22,6 @@
         <canvas></canvas>
         <script src="../support/js/canvas.js"></script>
         -->
-
-        <!--Firebase-->
-	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
-	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
-	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
 
     </head>
 
@@ -52,7 +51,7 @@
                 </a>
             </div>
 
-            <i class="fa fa-sign-out-alt"></i>
+            <i class="fa fa-sign-out-alt" onclick="logOut();"></i>
 
         </div>
 
