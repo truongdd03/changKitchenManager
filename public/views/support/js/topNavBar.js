@@ -13,20 +13,42 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function clickedAddDish() {
-    document.getElementById("AddDish").style.backgroundColor = "rgb(236, 179, 72)";
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById("AddDish").style.backgroundColor = "rgb(236, 179, 72)";
+        } else {
+            window.location.href = "/public/indexPage/indexPage.html";
+        }
+        });
 }
 
 function clickedMenu() {
-    document.getElementById("Menu").style.backgroundColor = "rgb(236, 179, 72)";
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById("Menu").style.backgroundColor = "rgb(236, 179, 72)";
+        } else {
+            window.location.href = "/public/indexPage/indexPage.html";
+        }
+        });
 }
 
 function clickedOrders() {
-    document.getElementById("Orders").style.backgroundColor = "rgb(236, 179, 72)";
-}
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById("Orders").style.backgroundColor = "rgb(236, 179, 72)";
+        } else {
+            window.location.href = "/public/indexPage/indexPage.html";
+        }
+        });}
 
 function clickedUsers() {
-    document.getElementById("Users").style.backgroundColor = "rgb(236, 179, 72)";
-}
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            document.getElementById("Users").style.backgroundColor = "rgb(236, 179, 72)";
+        } else {
+            window.location.href = "/public/indexPage/indexPage.html";
+        }
+        });}
 
 function logOut() {
     firebase.auth().signOut().then(() => {
