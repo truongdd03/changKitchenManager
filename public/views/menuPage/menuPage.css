@@ -4,7 +4,8 @@
 }
 
 .DatePicker {
-    background-color: rgb(238, 228, 174);
+    cursor: pointer;
+    background-color: rgb(245, 244, 219);
     font-size: 150%;
     border: none;
     color: black;
@@ -12,7 +13,7 @@
 
 .Dishes {
     float: left;
-    border: 5px solid orange; border-radius: 5%;
+    border: 5px solid orange; border-radius: 5%; background-color: rgb(245, 244, 219);
     height: 400px; width: 300px;
     text-align: center;
     margin: 10px 25px 50px 25px;

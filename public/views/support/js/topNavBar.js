@@ -13,15 +13,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 function clickedAddDish() {
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            console.log("Login!");
-            document.getElementById("AddDish").style.backgroundColor = "rgb(236, 179, 72)";
-        } else {
-            window.alert("Please login first!");
-            window.location = "/public/indexPage/indexPage.html";
-        }
-      });
+    document.getElementById("AddDish").style.backgroundColor = "rgb(236, 179, 72)";
 }
 
 function clickedMenu() {
@@ -37,5 +29,9 @@ function clickedUsers() {
 }
 
 function logOut() {
-    window.location = "/Authentication/LoginPage/LoginPage.html";
+    firebase.auth().signOut().then(() => {
+        window.location.href = "/indexPage/indexPage.html";
+    }).catch((error) => {
+        console.log(error);
+    });
 }

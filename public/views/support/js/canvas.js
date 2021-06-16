@@ -7,7 +7,7 @@ var c = canvas.getContext('2d');
 
 // Mouse Movement
 
-var mouse = {
+/*var mouse = {
 	x: undefined,
 	y: undefined
 }
@@ -86,4 +86,4 @@ function animate() {
 }
 
 init();
-animate();
+animate();*/

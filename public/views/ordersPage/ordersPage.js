@@ -1,7 +1,7 @@
 var currentID = -1;
 
 function load() {
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 20; i++) {
 
         var div = document.createElement('div');
         div.className = "OrderWrapper";

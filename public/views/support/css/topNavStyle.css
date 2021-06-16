@@ -4,16 +4,22 @@
     margin: 0;
 }
 
+body {
+    background-color: rgb(248, 236, 177);
+}
+
 p {
+    cursor: default;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
 }
 
 .Title {
-    font-weight: bold;
+    cursor: default;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     color: orange;
-    font-size: 250%;
+    font-size: 220%;
     margin-top: 50px; margin-bottom: 20px;
 }
 
@@ -46,6 +52,7 @@ p {
 }
 
 .HeadingWrapper {
+    cursor: pointer;
     display: block;
     position: absolute;
     top: 50%; left: 100px;
@@ -55,10 +62,11 @@ p {
     text-align: center;
     border-radius: 25px;
 
-    background-color: rgb(240, 233, 192);
+    background-color: rgb(245, 244, 219);
 }
 
 .Heading {
+    cursor: pointer;
     font-size: 170%;
     color: orange;
 }
@@ -72,6 +80,7 @@ p {
 }
 
 .ButtonWrapper {
+    cursor: pointer;
     display: block;
     float: right;
 
@@ -88,8 +97,9 @@ p {
 }
 
 .ButtonTitle {
+    cursor: pointer;
     top: 50%;
     transform: translate(0%, 25%);
-    font-size: 120%;
+    font-size: 130%;
     color: white;
 }

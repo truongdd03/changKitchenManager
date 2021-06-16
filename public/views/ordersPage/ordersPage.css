@@ -12,16 +12,20 @@
 
 .DishesWrapper {
     float: right;
+    background-color: rgb(245, 244, 219);
     margin-left: auto; margin-right: 5%;
 }
 
 .OrderWrapper {
-    border-bottom: 2px solid orange;
+    cursor: pointer;
+    border: 2px solid orange; background-color: rgb(245, 244, 219);
     height: 50px;
+    margin-bottom: 3px;
     vertical-align: middle;
 }
 
 .OrderInformation, .OrderPrice, .OrderStatus {
+    cursor: pointer;
     margin-left: 30px;
     height: 50px; line-height: 50px;
     float: left;

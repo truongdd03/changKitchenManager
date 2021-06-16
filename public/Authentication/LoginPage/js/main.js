@@ -15,11 +15,11 @@ firebase.initializeApp(firebaseConfig);
 function logIn() {
     var email = $("#email").val();
     var password = $("#password").val();
-    
+        
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-                
+        
         window.alert("Welcome back, Chang!");
-        window.location = "/views/menuPage/menuPage.html";
+        window.location.href = "/views/menuPage/menuPage.html";
 
     }).catch(function(error) {
 

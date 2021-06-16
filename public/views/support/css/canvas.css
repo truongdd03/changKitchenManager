@@ -2,5 +2,4 @@ canvas {
     z-index: -1;
     position: absolute;
     border: 1px solid black;
-    background-color: rgb(238, 228, 174);
 }

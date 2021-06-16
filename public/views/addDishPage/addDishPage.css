@@ -2,8 +2,6 @@
     text-align: center;
 }
 
-
-
 .MiddleWrapper {
     height: 40px;
     line-height: 40px;
@@ -21,6 +19,9 @@
 .AddButton, .EditButton {
     width: 50px;
     font-size: 150%;
+    font-weight: normal;
+    font-family: Arial;
+    cursor: pointer;
 }
 
 .AddButton {
@@ -41,6 +42,7 @@
 }
 
 .DishWrapper {
+    background-color: rgb(245, 244, 219);
     border: 3px solid orange; border-radius: 10%;
     height: 300px; width: 260px;
     margin: 10px 11px 0px 11px;
@@ -66,5 +68,6 @@
 
 .Price {
     font-size: 150%;
+    font-weight: normal;
 }
 

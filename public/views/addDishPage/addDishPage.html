@@ -16,12 +16,21 @@
         <script src="../support/js/topNavBar.js"></script>
         <script src="./addDishPage.js"></script>
         
+        <script type="text/javascript">
+            firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                document.getElementById("AddDish").style.backgroundColor = "rgb(236, 179, 72)";
+            } else {
+                window.location.href = "/public/indexPage/indexPage.html";
+                window.alert("Please login first!");
+            }
+            });
+        </script>
 
-        <!--
-        <link rel="stylesheet" type="text/css" href="../support/css/canvas.css">
+        <!--Canvas-->
+        <!--<link rel="stylesheet" type="text/css" href="../support/css/canvas.css">
         <canvas></canvas>
-        <script src="../support/js/canvas.js"></script>
-        -->
+        <script src="../support/js/canvas.js"></script>-->
 
     </head>
 
