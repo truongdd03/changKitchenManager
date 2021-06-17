@@ -13,7 +13,15 @@
 
         <script src="../support/js/topNavBar.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script src="./menuPage.js"></script>        
+        <script src="./menuPage.js"></script>       
+        
+        <script type="text/javascript">
+            firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "/public/indexPage/indexPage.html";
+            }
+            });
+        </script>
 
         <!--Canvas-->
         <!--<link rel="stylesheet" type="text/css" href="../support/css/canvas.css">

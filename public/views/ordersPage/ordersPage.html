@@ -15,6 +15,14 @@
         <script src="../support/js/topNavBar.js"></script>
         <script src="./ordersPage.js"></script>
 
+        <script type="text/javascript">
+            firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "/public/indexPage/indexPage.html";
+            }
+            });
+        </script>
+
         <!--Canvas-->
         <!--<link rel="stylesheet" type="text/css" href="../support/css/canvas.css">
         <canvas></canvas>
