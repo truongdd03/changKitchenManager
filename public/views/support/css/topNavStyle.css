@@ -80,6 +80,7 @@ p {
 }
 
 .ButtonWrapper {
+    position: relative;
     cursor: pointer;
     display: block;
     float: right;
