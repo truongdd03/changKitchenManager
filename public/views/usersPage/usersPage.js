@@ -9,4 +9,6 @@ function load() {
 
         document.getElementById('UsersWrapper').append(div);
     }
+
+    var tmp = new User("Dong", "113", "Loyal");
 }
