@@ -2,6 +2,9 @@
     <head>
         <title>changskitchen</title>
 
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     	<!--Firebase-->
 	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 	    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
@@ -12,11 +15,12 @@
         <link rel="stylesheet" type="text/css" href="../support/css/searchField.css">
         <link rel="stylesheet" type="text/css" href="./usersPage.css">
 
-        <script src="../support/js/class/user.js"></script>
+        <script src="../support/js/class/User.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="../support/js/topNavBar.js"></script>
         <script src="./usersPage.js"></script>
 
+        <!--Prevent strangers-->
         <script type="text/javascript">
             firebase.auth().onAuthStateChanged(function(user) {
             if (!user) {
