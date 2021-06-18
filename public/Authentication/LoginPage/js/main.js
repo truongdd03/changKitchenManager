@@ -18,6 +18,7 @@ function logIn() {
         
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
         
+        $(".loader-wrapper").fadeOut("slow");
         window.alert("Welcome back, Chang!");
         window.location.href = "/views/menuPage/menuPage.html";
 

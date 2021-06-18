@@ -11,10 +11,13 @@
     	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
     	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
 
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="../support/css/loader.css">
         <link rel="stylesheet" type="text/css" href="../support/css/topNavStyle.css">
         <link rel="stylesheet" type="text/css" href="../support/css/searchField.css">
         <link rel="stylesheet" type="text/css" href="./usersPage.css">
 
+        <!--JS-->
         <script src="../support/js/class/User.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="../support/js/topNavBar.js"></script>
@@ -73,15 +76,15 @@
             <input class="SearchField" placeholder="Type to search">
 
             <div class="UsersWrapper" id="UsersWrapper">
-
-                <div class="UserWrapper">
-                    <p class="Name">Truong Dinh Dong</p>
-                    <p class="Phone">0911099706</p>
-                    <p class="Rank">Loyal User</p>
-                    <i class="fa fa-trash"></i>                    
-                </div>
-
+                <!--Users will be here-->
             </div>
         </div>
+
+        <div class="loader-wrapper">
+            <span class="loader">
+                <span class="loader-inner"></span>
+            </span>
+        </div>
+
     </body>
 </html>

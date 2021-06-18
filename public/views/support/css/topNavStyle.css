@@ -26,7 +26,7 @@ p {
 /* Top navigation bar */
 .TopNavBar {
     cursor: pointer;
-    height: 70px; line-height: 70px;
+    height: 9%; line-height: 9%;
     vertical-align: middle;
     background-color: orange;
     position: relative;
@@ -76,7 +76,7 @@ p {
     position: absolute;
     top: 50%; right: 90px;
     transform: translate(0%, -50%);
-    height: 70;
+    height: 100%;
 }
 
 .ButtonWrapper {
@@ -86,7 +86,7 @@ p {
     float: right;
 
     text-decoration: none;
-    height: 70;
+    height: 100%;
     width: 150px;
     line-height: 46px;
 
@@ -100,7 +100,7 @@ p {
 .ButtonTitle {
     cursor: pointer;
     top: 50%;
-    transform: translate(0%, 25%);
+    transform: translate(0%, 30%);
     font-size: 130%;
     color: white;
 }

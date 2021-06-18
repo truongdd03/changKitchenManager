@@ -28,6 +28,8 @@ function loadUsers() {
 
         document.getElementById('UsersWrapper').append(div);
     }
+
+    $(".loader-wrapper").fadeOut("slow");
 }
 
 function load() {
