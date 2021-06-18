@@ -22,7 +22,6 @@ function loadUsers() {
         var div = document.createElement('div');
         div.innerHTML += '<p class="Name">' + user.name + '</p>';
         div.innerHTML += '<p class="Phone">' + user.phone + '</p>';
-        div.innerHTML += '<i class="fa fa-trash"></i>'
         div.innerHTML += '<p class="Rank">'+ user.rank + '</p>';
         div.className = "UserWrapper";
 
