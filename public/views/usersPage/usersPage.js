@@ -35,3 +35,21 @@ function loadUsers() {
 function load() {
     fetchData(loadUsers);
 }
+
+function filter() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('SearchBar');
+    filter = input.value.toUpperCase();
+    li = document.getElementsByClassName('UserWrapper');
+    
+    for (i = 0; i < li.length; i++) {
+      a = li[i].firstChild;
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }

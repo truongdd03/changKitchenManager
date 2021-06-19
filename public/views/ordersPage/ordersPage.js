@@ -74,30 +74,35 @@ function findPositionOfOrder(id) {
 function clicked(id) {
     changeColorOfRow(id);
 
-    /*var limiter = document.createElement('div');
-    limiter.className = 'limiter';
-    
-    var container_table100 = document.createElement('div');
-    container_table100.className = "container-table100";
-
-    var wrap_table100 = document.createElement('div');
-    wrap_table100.className = "wrap_table100";*/
-
-
-    var table = document.createElement('div');
-    table.className = "table100";
+    var tbody = document.getElementById('tbody');
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild);
+    }
 
     var pos = findPositionOfOrder(id);
     for (dish of listOfOrders[pos].dishes) {
         var tr = document.createElement('tr');
 
-        var th1 = document.createElement('th');
-        th1.className = "column3";
-        th1.innerHTML = 
-        table.innerHTML += '<tr><th class="column3">' + dish.id + '</th>'
-        table.innerHTML += '<th class="column4">$' + 100 + '</th>'
-        table.innerHTML += '<th class="column5">' + dish.quantity + '</th>'
-        table.innerHTML += '<th class="column6">$' + 100 + '</th></tr>'
-    }
+        var td1 = document.createElement('td');
+        td1.className = "column3";
+        td1.appendChild(document.createTextNode(dish.id));
+        tr.appendChild(td1);
 
+        var td2 = document.createElement('td');
+        td2.className = "column4";
+        td2.appendChild(document.createTextNode(100));
+        tr.appendChild(td2);
+
+        var td3 = document.createElement('td');
+        td3.className = "column5";
+        td3.appendChild(document.createTextNode(dish.quantity));
+        tr.appendChild(td3);
+
+        var td4 = document.createElement('td');
+        td4.className = "column6";
+        td4.appendChild(document.createTextNode(100));
+        tr.appendChild(td4);
+
+        tbody.appendChild(tr);
+    }
 }
