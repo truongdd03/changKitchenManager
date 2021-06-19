@@ -1,0 +1,16 @@
+.DetailWrapper {
+    float: right;
+    background-color: rgb(248, 236, 177);
+    margin-left: auto; margin-right: 5%;
+    width: 44%; height: 70%;
+    overflow: scroll;
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.OrderTitle {
+    font-size: 30px;
+    color: orange;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

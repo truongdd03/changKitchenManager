@@ -2,7 +2,7 @@
     border-radius: 10px; border: 2px solid gray;
     height: 40px; width: 1000px;
     padding: 0px 10px 0px 10px; margin: 0px 10px 10px 10px;
-    font-size: 125%;
+    font-size: 18px;
 }
 
 .UsersWrapper {
@@ -24,7 +24,7 @@
 .Name, .Phone, .Rank {
     cursor: default;
     height: 50px; line-height: 50px;
-    font-size: 150%;
+    font-size: 18px;
 }
 
 .Name {
@@ -36,7 +36,7 @@
 
 .Phone {
     width: 200px;
-    margin-left: 150px;
+    margin-left: 125px;
     float: left;
     color: black;
 }
@@ -47,18 +47,4 @@
     text-align: right;
     float: right;
     color: gray;
-}
-
-.fa.fa-trash {
-    position: absolute;
-    cursor: pointer;   
-    float: right; margin-right: 0px;
-    height: 30px; width: 30px; line-height: 30px;
-    text-rendering: auto;
-}
-
-.fa-trash::before {
-    font-size: 25px;
-    cursor: pointer;
-    color: red;
 }

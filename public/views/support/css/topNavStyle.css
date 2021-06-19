@@ -1,5 +1,15 @@
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: OpenSans-Bold;
+    src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf');
+}
+
 * {
     margin: 0;
 }
@@ -10,16 +20,15 @@ body {
 
 p {
     cursor: default;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
+    font-family: OpenSans-Regular;
 }
 
 .Title {
     cursor: default;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: OpenSans-Bold;
     text-align: center;
     color: orange;
-    font-size: 220%;
+    font-size: 35px;
     margin-top: 50px; margin-bottom: 20px;
 }
 
@@ -66,8 +75,9 @@ p {
 }
 
 .Heading {
+    font-family: OpenSans-Bold;
     cursor: pointer;
-    font-size: 170%;
+    font-size: 25px;
     color: orange;
 }
 
@@ -98,6 +108,7 @@ p {
 }
 
 .ButtonTitle {
+    font-family: OpenSans-Bold;
     cursor: pointer;
     top: 50%;
     transform: translate(0, 175%);

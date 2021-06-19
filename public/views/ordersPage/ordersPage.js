@@ -61,5 +61,5 @@ function clicked(id) {
     }
 
     currentID = id;
-    document.getElementById("DishesWrapper").append(div);
+    document.getElementById("DetailWrapper").append(div);
 }
