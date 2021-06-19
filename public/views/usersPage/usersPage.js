@@ -8,7 +8,7 @@ function fetchData(callback) {
             var data = childSnapshot.val();
             var name = data['firstname'] + " " + data['lastname'];
             var phone = data['phone'];
-            var order = data['order'];
+            var order = data['orders'];
             listOfUsers.push(new User(name, phone, order));
         })
         callback();
@@ -20,6 +20,7 @@ function fetchData(callback) {
 function loadUsers() {
     for (user of listOfUsers) {
         var div = document.createElement('div');
+
         div.innerHTML += '<p class="Name">' + user.name + '</p>';
         div.innerHTML += '<p class="Phone">' + user.phone + '</p>';
         div.innerHTML += '<p class="Rank">'+ user.rank + '</p>';

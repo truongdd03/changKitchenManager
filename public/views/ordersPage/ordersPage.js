@@ -8,16 +8,21 @@ function fetchOrders(callback) {
 
     ref.child('orderStatus').on('value', function(snapshot) {
         snapshot.forEach(function(order) {
-            //console.log(order.val());
-
             var detail = order.val();
             var id = detail['id'];
             var pickUpTime = detail['pickUpTime'];
             var status = detail['status'];
             var cost = detail['total'];
             var uid = detail['uid'];
+            var orderDishes = [];
 
-            listOfOrders.push(new Order(id, pickUpTime, status, cost, uid));
+            order.forEach(function(dish) {
+                var data = dish.val();
+                console.log(data);
+                orderDishes.push(new OrderDish(data['id'], data['note'], data['quantity']));
+            })
+
+            listOfOrders.push(new Order(id, pickUpTime, status, cost, uid, orderDishes));
         })
 
         callback();
