@@ -57,7 +57,7 @@ function load() {
 
 function changeColorOfRow(id) {
     document.getElementById(id).style.backgroundColor = "rgb(245, 228, 200)";
-    if (currentID != -1) {
+    if (currentID != -1 && currentID != id) {
         document.getElementById(currentID).style.backgroundColor = "rgb(245, 244, 219)";
     }
     currentID = id;
@@ -71,7 +71,7 @@ function findPositionOfOrder(id) {
     }
 }
 
-function loadDish(order, dish) {
+function loadTable(order, dish) {
     var tr = document.createElement('tr');
 
     var td1 = document.createElement('td');
@@ -104,7 +104,7 @@ function fetchMenuDish(order) {
             var info = dish.val();
             if (info['id'] == order.id) {
                 var tmp =  new MenuDish(info['courseType'], info['name'], info['price'], info['id']);
-                loadDish(order, tmp);
+                loadTable(order, tmp);
             }
         })
     })
