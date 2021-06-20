@@ -103,7 +103,7 @@ function fetchMenuDish(order) {
         snapshot.forEach(function(dish) {
             var info = dish.val();
             if (info['id'] == order.id) {
-                var tmp =  new MenuDish(info['courseType'], info['name'], info['price'], info['id']);
+                var tmp =  new MenuDish(info['courseType'], info['name'], info['price'], info['id'], "");
                 loadTable(order, tmp);
             }
         })
