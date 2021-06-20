@@ -1,8 +1,8 @@
 function load() {
-    for (i = 0; i < 10; ++i) {
 
-        //var tmp = new MenuDishes("main", "egg", 2, 20);
-        //console.log(tmp.getName());
+    fetchMenuDish(4);
+
+    for (i = 0; i < 10; ++i) {
 
         var div = document.createElement('div');
         div.className = "DishWrapper";

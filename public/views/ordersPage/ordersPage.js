@@ -71,38 +71,56 @@ function findPositionOfOrder(id) {
     }
 }
 
+function loadDish(order, dish) {
+    var tr = document.createElement('tr');
+
+    var td1 = document.createElement('td');
+    td1.className = "column3";
+    td1.appendChild(document.createTextNode(dish.name));
+    tr.appendChild(td1);
+                
+    var td2 = document.createElement('td');
+    td2.className = "column4";
+    td2.appendChild(document.createTextNode(dish.price));
+    tr.appendChild(td2);
+                
+    var td3 = document.createElement('td');
+    td3.className = "column5";
+    td3.appendChild(document.createTextNode(order.quantity));
+    tr.appendChild(td3);
+                
+    var td4 = document.createElement('td');
+    td4.className = "column6";
+    td4.appendChild(document.createTextNode(dish.price * order.quantity));
+    tr.appendChild(td4);
+
+    tbody.appendChild(tr);
+}
+
+function fetchMenuDish(order) {
+    var ref = firebase.database().ref();
+    ref.child('menuDishes').on('value', function(snapshot) {
+        snapshot.forEach(function(dish) {
+            var info = dish.val();
+            if (info['id'] == order.id) {
+                var tmp =  new MenuDish(info['courseType'], info['name'], info['price'], info['id']);
+                loadDish(order, tmp);
+            }
+        })
+    })
+}
+
+var tbody;
 function clicked(id) {
     changeColorOfRow(id);
 
-    var tbody = document.getElementById('tbody');
+    tbody = document.getElementById('tbody');
     while (tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
 
     var pos = findPositionOfOrder(id);
-    for (dish of listOfOrders[pos].dishes) {
-        var tr = document.createElement('tr');
-
-        var td1 = document.createElement('td');
-        td1.className = "column3";
-        td1.appendChild(document.createTextNode(dish.id));
-        tr.appendChild(td1);
-
-        var td2 = document.createElement('td');
-        td2.className = "column4";
-        td2.appendChild(document.createTextNode(100));
-        tr.appendChild(td2);
-
-        var td3 = document.createElement('td');
-        td3.className = "column5";
-        td3.appendChild(document.createTextNode(dish.quantity));
-        tr.appendChild(td3);
-
-        var td4 = document.createElement('td');
-        td4.className = "column6";
-        td4.appendChild(document.createTextNode(100));
-        tr.appendChild(td4);
-
-        tbody.appendChild(tr);
+    for (order of listOfOrders[pos].dishes) {
+        fetchMenuDish(order);
     }
 }
