@@ -15,7 +15,7 @@ function fetchAllDishes(callback) {
 }
 
 function loadAllDishes() {
-
+    var i = 0;
     listOfDishes.forEach(function(dish) {
         var path = dish.id + '.jpg';
         storage.child('/Dish Image/'+path).getDownloadURL().then(function(url) {
@@ -26,10 +26,12 @@ function loadAllDishes() {
             div.innerHTML = div.innerHTML + '<p class="Price">$' + dish.price + '</p>';
 
             document.getElementById("Dishes").append(div);
+            ++i;
+            if (i == listOfDishes.length) {
+                $(".loader-wrapper").fadeOut("slow");    
+            }
         });
     });
-
-    $(".loader-wrapper").fadeOut("slow");
 }
 
 function load() {
