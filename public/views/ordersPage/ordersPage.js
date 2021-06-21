@@ -107,9 +107,19 @@ function findPositionOfOrder(id) {
 function loadTable(order, dish) {
     var tr = document.createElement('tr');
 
+    tr.onclick = function() {
+        if (order.note != "") {
+            window.alert(order.note);
+        }
+    }
+
     var td1 = document.createElement('td');
     td1.className = "column3";
-    td1.appendChild(document.createTextNode(dish.name));
+    if (order.note != "") {
+        td1.appendChild(document.createTextNode(dish.name + "**"));
+    } else {
+        td1.appendChild(document.createTextNode(dish.name));
+    }
     tr.appendChild(td1);
                 
     var td2 = document.createElement('td');

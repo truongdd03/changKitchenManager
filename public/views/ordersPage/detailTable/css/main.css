@@ -130,6 +130,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr {
+  cursor: default;
   font-family: OpenSans-Regular;
   font-size: 15px;
   color: #808080;
