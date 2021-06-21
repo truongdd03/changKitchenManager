@@ -38,7 +38,7 @@ function load() {
 
 function filter() {
     // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter,li, a, i, txtValue;
     input = document.getElementById('SearchBar');
     filter = input.value.toUpperCase();
     li = document.getElementsByClassName('UserWrapper');
@@ -52,4 +52,4 @@ function filter() {
         li[i].style.display = "none";
       }
     }
-  }
+}
