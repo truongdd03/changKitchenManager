@@ -12,7 +12,18 @@ function isExisted(order) {
     return false;
 }
 
-async function fetchOrders(callback) {
+function checkOrder(order, quantity) {
+    var list = order.dishes;
+    if (list.length != quantity) return false;
+    for (dish of list) {
+        if (dish.id == undefined || dish.quantity == undefined) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function fetchOrders(callback) {
     ref.child('orderStatus').on('value', function(snapshot) {
         snapshot.forEach(function(order) {
             var detail = order.val();
@@ -26,7 +37,7 @@ async function fetchOrders(callback) {
             })
         
             var newOrder = new Order(detail['id'], detail['pickUpTime'], detail['status'], detail['total'], detail['uid'], orderDishes);
-            if (!isExisted(newOrder)) {
+            if (!isExisted(newOrder) && checkOrder(newOrder, detail['quantity'])) {
                 listOfOrders.push(newOrder);
             }
         })
