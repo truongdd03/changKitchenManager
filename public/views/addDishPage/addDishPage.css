@@ -12,33 +12,23 @@
 .SearchField {
     border-radius: 10px; border: 2px solid gray;
     height: 40px; width: 800px;
-    padding: 0px 10px 0px 10px; margin: 0px 0px 10px 15%;
+    padding: 0px 10px 0px 10px; margin: 0px 0px 10px 0px;
     font-size: 125%;
 }
 
-.AddButton, .EditButton {
-    width: 50px;
-    font-size: 150%;
-    font-weight: normal;
-    font-family: Arial;
-    cursor: pointer;
+.far.fa-plus-square {
+    float: inline-end;
+    height: 40px; width: 40px; line-height: 100%;
+    transform: translate(0, 18%);
 }
 
-.AddButton {
+.fa-plus-square {
+    font-size: 40px;
     color: green;
-    float: right;
-    margin: 0px 10px 0px 5px;
 }
-
-.EditButton {
-    color: red;
-    float: right;
-    margin-right: 15%;
-}
-
 
 .Dishes {
-    margin: 0px 10% 0px 10%;
+    margin: 10px 10% 0px 10%;
 }
 
 .DishWrapper {
@@ -51,7 +41,7 @@
 
 .Image {
     border-radius: 10%;
-    margin: 10px;
+    margin: 25px auto 10px auto;
     height: 175px; width: 200px;
     object-fit: cover;
 }
@@ -69,5 +59,18 @@
 .Price {
     font-size: 150%;
     font-weight: normal;
+}
+
+.fas.fa-times {
+    cursor: pointer;
+    position: absolute;
+    float: right;
+    margin-left: -35px;
+    margin-top: -8px;
+    height: 30px; width: 30px; line-height: 100%;
+}
+
+.fa-times {
+    font-size: 30px;
 }
 
