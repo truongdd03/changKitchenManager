@@ -81,6 +81,7 @@ function loadOrders() {
 
     })
 
+    if (currentID != -1) { document.getElementById(currentID).style.backgroundColor = "rgb(245, 228, 200)"; }
     $(".loader-wrapper").fadeOut("slow");
 }
 
