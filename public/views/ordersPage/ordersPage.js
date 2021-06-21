@@ -12,15 +12,10 @@ function isExisted(order) {
     return false;
 }
 
-function fetchOrders(callback) {
+async function fetchOrders(callback) {
     ref.child('orderStatus').on('value', function(snapshot) {
         snapshot.forEach(function(order) {
             var detail = order.val();
-            var id = detail['id'];
-            var pickUpTime = detail['pickUpTime'];
-            var status = detail['status'];
-            var cost = detail['total'];
-            var uid = detail['uid'];
             var orderDishes = [];
 
             order.forEach(function(dish) {
@@ -29,21 +24,14 @@ function fetchOrders(callback) {
                     orderDishes.push(new OrderDish(data['id'], data['note'], data['quantity']));
                 }
             })
-            
-            var newOrder = new Order(id, pickUpTime, status, cost, uid, orderDishes);
+        
+            var newOrder = new Order(detail['id'], detail['pickUpTime'], detail['status'], detail['total'], detail['uid'], orderDishes);
             if (!isExisted(newOrder)) {
                 listOfOrders.push(newOrder);
             }
         })
 
         callback();
-    })
-}
-
-function fetchName(uid) {
-    ref.child('uid').on('value', function(snapshot) {
-        var dict = snapshot.val;
-        var name = dict['firstname'] + " " + dict['lastname'];
     })
 }
 
@@ -57,24 +45,30 @@ function resetOrdersWrapper() {
 function loadOrders() {
     resetOrdersWrapper();
 
-    for (order of listOfOrders) {
+    listOfOrders.forEach(function(order) {
         var div = document.createElement('div');
         div.className = "OrderWrapper";
         div.id = order.id;
+    
+        ref.child('users').child(order.uid).on('value', function(snapshot) {
+            var dict = snapshot.val();
+            var name = dict['firstname'] + " " + dict['lastname'];
 
-        div.innerHTML = div.innerHTML + '<p class="OrderInformation">#' + order.id+ '<\p>';
-        div.innerHTML = div.innerHTML + '<p class="OrderInformation">Truong Dinh Dong<\p>';
-        div.innerHTML = div.innerHTML + '<p class="OrderPrice">$' + order.cost + '<\p>';
-        div.innerHTML = div.innerHTML + '<p class="OrderStatus">' + order.status + '<\p>';
+            div.innerHTML = div.innerHTML + '<p class="OrderInformation">#' + order.id + '<\p>';
+            div.innerHTML = div.innerHTML + '<p class="OrderInformation">' + name + '<\p>';
+            div.innerHTML = div.innerHTML + '<p class="OrderPrice">$' + order.cost + '<\p>';
+            div.innerHTML = div.innerHTML + '<p class="OrderStatus">' + order.status + '<\p>';
+    
+            div.onclick = (function(id) { 
+                return function() { 
+                    clicked(id);
+                }
+            })(order.id);
+    
+            document.getElementById("OrdersWrapper").append(div);
+        });
 
-        div.onclick = (function(id) { 
-            return function() { 
-                clicked(id);
-            }
-        })(order.id);
-
-        document.getElementById("OrdersWrapper").append(div);
-    }
+    })
 
     $(".loader-wrapper").fadeOut("slow");
 }
