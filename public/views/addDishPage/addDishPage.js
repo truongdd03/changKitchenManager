@@ -2,15 +2,29 @@ var listOfDishes = [];
 var storage = firebase.storage().ref();
 var ref = firebase.database().ref();
 
+function isDishExist(dish) {
+    for (item of listOfDishes) {
+        if (item.id == dish.id) {            
+            return true
+        }
+    }
+    return false;
+}
+
 function fetchAllDishes(callback) {
     ref.child('menuDishes').on('value', function(snapshot) {
+        var hasChanged = false;
+
         snapshot.forEach(function(dish) {
             var info = dish.val();
             var tmp =  new MenuDish(info['courseType'], info['name'], info['price'], info['id']);
-            listOfDishes.push(tmp);
+            if (isDishExist(tmp) == false) {
+                listOfDishes.push(tmp);
+                hasChanged = true
+            } 
         })
 
-        callback();
+        if (hasChanged) { callback(); }
     })
 }
 
@@ -76,7 +90,15 @@ function removeDishFromList(dish) {
     }
 }
 
+function deleteConfirm(dish) {
+    if (confirm("Are you sure you want to remove " + dish.name + "?")) {
+        return true;
+    }
+    return false;
+}
+
 function deleteDish(dish) {
+    if (deleteConfirm(dish) == false) { return; }
     removeDishFromList(dish);
     var dishes = document.getElementsByClassName('DishWrapper');
 
