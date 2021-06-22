@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* The popup form - hidden by default */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 3px solid #f1f1f1;
+    z-index: 1;
+}
+
+
+/* Add styles to the form container */
+
+.form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+
+/* Full-width input fields */
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 0px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    font-size: 18px;
+}
+
+
+/* When the inputs get focus, do something */
+
+.form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.containerSubmitForm,
+.containerCloseForm {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.submitForm,
+.closeForm {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.uploadImage {
+    width: 100%;
+    height: auto;
+    line-height: 100%;
+    text-align: center;
+}
+
+#uploadImageTitle {
+    color: orange;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#uploadImage {
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.submitForm {
+    background-color: orange;
+}
+
+.closeForm {
+    background-color: red;
+}
+
+.submitForm:hover,
+.closeForm:hover {
+    background-color: #333333;
+}
+
+.formTitle {
+    color: orange;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}

@@ -4,7 +4,7 @@ var ref = firebase.database().ref();
 
 function isDishExist(dish) {
     for (item of listOfDishes) {
-        if (item.id == dish.id) {            
+        if (item.id == dish.id) {
             return true
         }
     }
@@ -17,11 +17,11 @@ function fetchAllDishes(callback) {
 
         snapshot.forEach(function(dish) {
             var info = dish.val();
-            var tmp =  new MenuDish(info['courseType'], info['name'], info['price'], info['id']);
+            var tmp = new MenuDish(info['courseType'], info['name'], info['price'], info['id']);
             if (isDishExist(tmp) == false) {
                 listOfDishes.push(tmp);
                 hasChanged = true
-            } 
+            }
         })
 
         if (hasChanged) { callback(); }
@@ -32,14 +32,14 @@ function loadAllDishes() {
     var i = 0;
     listOfDishes.forEach(function(dish) {
         var path = dish.id + '.jpg';
-        storage.child('/Dish Image/'+path).getDownloadURL().then(function(url) {
+        storage.child('/Dish Image/' + path).getDownloadURL().then(function(url) {
             var div = document.createElement('div');
             div.className = "DishWrapper";
 
             var icon = document.createElement('i');
             icon.className = "fas fa-times";
-            div.onclick = (function(dish) { 
-                return function() { 
+            div.onclick = (function(dish) {
+                return function() {
                     deleteDish(dish);
                 }
             })(dish);
@@ -53,7 +53,7 @@ function loadAllDishes() {
             document.getElementById("Dishes").append(div);
             ++i;
             if (i == listOfDishes.length) {
-                $(".loader-wrapper").fadeOut("slow");    
+                $(".loader-wrapper").fadeOut("slow");
             }
         });
     });
@@ -65,19 +65,19 @@ function load() {
 
 function filter() {
     // Declare variables
-    var input, filter,li, a, i, txtValue;
+    var input, filter, li, a, i, txtValue;
     input = document.getElementById('SearchBar');
     filter = input.value.toUpperCase();
     li = document.getElementsByClassName('DishWrapper');
-    
+
     for (i = 0; i < li.length; i++) {
-      a = li[i].childNodes[2];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
+        a = li[i].childNodes[2];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
     }
 }
 
@@ -108,6 +108,6 @@ function deleteDish(dish) {
             break;
         }
     }
-    
+
     ref.child('menuDishes').child(dish.id).remove();
 }

@@ -17,6 +17,7 @@
 }
 
 .far.fa-plus-square {
+    cursor: pointer;
     float: inline-end;
     height: 40px; width: 40px; line-height: 100%;
     transform: translate(0, 18%);
@@ -53,11 +54,11 @@
 
 .Name {
     color: orange;
-    font-size: 170%;
+    font-size: 25px;
 }
 
 .Price {
-    font-size: 150%;
+    font-size: 20px;
     font-weight: normal;
 }
 
