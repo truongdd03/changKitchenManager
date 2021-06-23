@@ -26,7 +26,7 @@ function fetchID(dish, file) {
 	ref.child("menuDishID").once('value').then((snapshot) => {
 		var tmp = snapshot.val();
 		ref.child("menuDishID").set(tmp + 1);
-		dish.id = tmp;
+		dish.id = tmp.toString();
 		listOfDishes.push(dish);
 
 		ref.child("menuDishes").child(dish.id).set({
