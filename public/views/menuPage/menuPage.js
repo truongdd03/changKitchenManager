@@ -6,10 +6,15 @@ function reformat(date) {
     return tmp;
 }
 
-function loadDish(dish) {
+function loadDish(dish, date) {
     var iconWrapper = document.createElement('div');
     iconWrapper.className = "DeleteIcon";
     iconWrapper.innerHTML = '<i class="far fa-trash-alt"></i>';
+    iconWrapper.onclick = (function(dish) {
+        return function() {
+            deleteDish(dish, date);
+        }
+    })(dish, date);
 
     var wrapper = document.createElement('div');
     wrapper.className = "Dish";
@@ -19,12 +24,12 @@ function loadDish(dish) {
     document.getElementById(dish.courseType).appendChild(wrapper);
 }
 
-function loadMenu() {
+function loadMenu(date) {
     menu.forEach(function(id) {
         ref.child("menuDishes").child(id).get().then((dish) => {
             var dict = dish.val();
             var dish = new MenuDish(dict['courseType'], dict['name'], dict['price'], id);
-            loadDish(dish);
+            loadDish(dish, date);
         }).catch((error) => {
             console.log(error);
         })
@@ -34,13 +39,17 @@ function loadMenu() {
 
 function fetchMenu(date) {
     $(".loader-wrapper").show();
+
+    $('.Dish').remove();
+
+
     menu = [];
     ref.child("menus").child(date).get().then((snapshot) => {
         snapshot.forEach(function(dishID) {
             menu.push(dishID.val());
         });
 
-        loadMenu();
+        loadMenu(date);
     }).catch((error) => {
         console.log(error);
     });
@@ -66,14 +75,24 @@ function updateDate() {
         todayDate = todayDate + day;
     }
 
-    if (todayDate == newDate || newDate == "") {
+    if (todayDate == newDate) {
         document.getElementById("currentDate").innerHTML = "Today's Menu"
     }
 
-    var date = reformat(newDate);
-    fetchMenu(date);
+    fetchMenu(reformat(newDate));
 }
 
-function clicked() {
-    
+function deleteDish(dish, date) {
+    if (!confirm("Are you sure you want to remove " + dish.name + "?")) {
+        return;
+    }
+
+    var dishes = document.getElementsByClassName("Dish");
+    for (i in dishes) {
+        if (dishes[i].textContent == dish.name + " $" + dish.price) {
+            dishes[i].remove();
+        }
+    }
+
+    ref.child('menus').child(date).child("id" + dish.id).remove();
 }
