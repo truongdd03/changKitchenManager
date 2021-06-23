@@ -27,7 +27,7 @@
 
     <!--Prevent strangers-->
     <script type="text/javascript">
-        firebase.auth().onAuthStateChanged(function(user) {
+        firebase.auth().onAuthStateChanged(function (user) {
             if (!user) {
                 window.location.href = "/public/indexPage/indexPage.html";
             }
@@ -94,6 +94,16 @@
 
             <input type="text" placeholder="Enter Price" id="DishPrice" required>
 
+            <select id="CourseTypes">
+                <optgroup>
+                    <option class="option" value="Appetizer">Appetizer</option>
+                    <option class="option" value="Soup">Soup</option>
+                    <option class="option" value="Main">Main</option>
+                    <option class="option" value="Dessert">Dessert</option>
+                </optgroup>
+            </select>
+
+
             <div class="uploadImage">
                 <p id="uploadImageTitle">Choose Image</p>
                 <input type="file" id="uploadImage" name="filename">
@@ -111,7 +121,7 @@
 
     <div class="loader-wrapper">
         <span class="loader">
-                <span class="loader-inner"></span>
+            <span class="loader-inner"></span>
         </span>
     </div>
 

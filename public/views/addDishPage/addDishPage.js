@@ -28,29 +28,32 @@ function fetchAllDishes(callback) {
     })
 }
 
+function loadDish(dish, url) {
+    var div = document.createElement('div');
+    div.className = "DishWrapper";
+
+    var icon = document.createElement('i');
+    icon.className = "fas fa-times";
+    div.onclick = (function(dish) {
+        return function() {
+            deleteDish(dish);
+        }
+    })(dish);
+    div.appendChild(icon);
+
+    div.innerHTML += '<img src=' + url + ' class="Image">';
+    div.innerHTML += '<p class="Name">' + dish.name + '</p>';
+    div.innerHTML += '<p class="Price">$' + dish.price + '</p>';
+
+    document.getElementById("Dishes").append(div);
+}
+
 function loadAllDishes() {
     var i = 0;
     listOfDishes.forEach(function(dish) {
         var path = dish.id + '.jpg';
         storage.child('/Dish Image/' + path).getDownloadURL().then(function(url) {
-            var div = document.createElement('div');
-            div.className = "DishWrapper";
-
-            var icon = document.createElement('i');
-            icon.className = "fas fa-times";
-            div.onclick = (function(dish) {
-                return function() {
-                    deleteDish(dish);
-                }
-            })(dish);
-            div.appendChild(icon);
-
-            div.innerHTML += '<img src=' + url + ' class="Image">';
-            div.innerHTML += '<p class="Name">' + dish.name + '</p>';
-            div.innerHTML += '<p class="Price">$' + dish.price + '</p>';
-
-
-            document.getElementById("Dishes").append(div);
+            loadDish(dish, url);
             ++i;
             if (i == listOfDishes.length) {
                 $(".loader-wrapper").fadeOut("slow");

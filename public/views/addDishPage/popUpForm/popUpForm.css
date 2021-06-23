@@ -30,12 +30,15 @@
 .form-container input[type=text] {
     width: 100%;
     padding: 15px;
-    margin: 0px 0 22px 0;
+    margin: 0px 0 15px 0;
     border: none;
     background: #f1f1f1;
-    font-size: 18px;
+    font-size: 14px;
 }
 
+#CourseTypes {
+    margin-bottom: 15px;
+}
 
 /* When the inputs get focus, do something */
 
@@ -77,12 +80,13 @@
 
 #uploadImageTitle {
     color: orange;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 #uploadImage {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 22px;
 }
 
