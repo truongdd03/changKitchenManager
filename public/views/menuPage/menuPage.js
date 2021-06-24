@@ -86,6 +86,13 @@ function deleteDish(dish) {
         return;
     }
 
+    for (i = 0; i < menu.length; ++i) {
+        if (menu[i] == dish.id) {
+            menu.splice(i, 1);
+            break;
+        }
+    }
+
     var dishes = document.getElementsByClassName("Dish");
     for (i in dishes) {
         if (dishes[i].textContent == dish.name + " $" + dish.price) {
