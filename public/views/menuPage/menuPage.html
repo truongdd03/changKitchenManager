@@ -15,6 +15,7 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="../support/css/loader.css">
     <link rel="stylesheet" type="text/css" href="../support/css/topNavStyle.css">
+    <link rel="stylesheet" type="text/css" href="./dropdownList.css">
     <link rel="stylesheet" type="text/css" href="./menuPage.css">
 
     <!--JS-->
@@ -39,7 +40,7 @@
 
 </head>
 
-<body onload="clickedMenu(); updateDate();">
+<body onload="clickedMenu(); updateDate(); loadOptions();">
 
     <div class="TopNavBar">
 
@@ -78,21 +79,40 @@
                 <input class="DatePicker" id="newDate" type="date" onblur="updateDate();">
             </div>
 
+            <!--Appetizer-->
             <div class="Dishes">
                 <p class="DishesTitle">Appetizer</p>
                 <div class="AddIcon">
-                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-plus-square" onclick="addDish('Appetizer');"></i>
+                </div>
+                <div class="selectWrapper">
+                    <div class="select">
+                        <select id="AppetizerSelect">
+                            <!--Dish options-->
+                        </select>
+                        <span class="focus"></span>
+                    </div>
                 </div>
 
                 <div id="Appetizer">
                     <!--Dishes will appear here-->
                 </div>
+
             </div>
 
-            <div class="Dishes" id="Soup">
+            <!--Soup-->
+            <div class="Dishes">
                 <p class="DishesTitle">Soup</p>
                 <div class="AddIcon">
-                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-plus-square" onclick="addDish('Soup');"></i>
+                </div>
+                <div class="selectWrapper">
+                    <div class="select">
+                        <select id="SoupSelect">
+                            <!--Dish options-->
+                        </select>
+                        <span class="focus"></span>
+                    </div>
                 </div>
 
                 <div id="Soup">
@@ -101,10 +121,19 @@
 
             </div>
 
-            <div class="Dishes" id="Main">
+            <!--Main-->
+            <div class="Dishes">
                 <p class="DishesTitle">Main</p>
                 <div class="AddIcon">
-                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-plus-square" onclick="addDish('Main');"></i>
+                </div>
+                <div class="selectWrapper">
+                    <div class="select">
+                        <select id="MainSelect">
+                            <!--Dish options-->
+                        </select>
+                        <span class="focus"></span>
+                    </div>
                 </div>
 
                 <div id="Main">
@@ -112,13 +141,22 @@
                 </div>
             </div>
 
-            <div class="Dishes" id="Dessert">
+            <!--Dessert-->
+            <div class="Dishes">
                 <p class="DishesTitle">Dessert</p>
                 <div class="AddIcon">
-                    <i class="far fa-plus-square"></i>
+                    <i class="far fa-plus-square" onclick="addDish('Dessert');"></i>
+                </div>
+                <div class="selectWrapper">
+                    <div class="select">
+                        <select id="DessertSelect">
+                            <!--Dish options-->
+                        </select>
+                        <span class="focus"></span>
+                    </div>
                 </div>
 
-                <div id="Main">
+                <div id="Dessert">
                     <!--Dishes will appear here-->
                 </div>
             </div>

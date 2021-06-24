@@ -1,0 +1,30 @@
+.selectWrapper {
+    width: 240px;
+    position: absolute; left: 10px; bottom: 10px;
+}
+
+select {
+    appearance: none;
+    border: none;
+    width: 100%;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+}
+
+.select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    width: 100%;
+    border-radius: 0.25em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+}
+
+select:focus+.focus {
+    position: absolute;
+    border-radius: inherit;
+}
+
