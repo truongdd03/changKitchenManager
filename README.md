@@ -32,3 +32,5 @@ The following required functionality is completed:
   - [x] Make it easier for admin to find dish by adding search bar.
   - [x] Contains an add button. The added dish, include name, price, course type, and image, will be stored on Firebase.
   - [x] Admin can remove any dish by clicking its delete button.
+
+## Video Walkthrough
