@@ -1,6 +1,6 @@
 # eShopManager
 
-eShopManager is used to manage [the eShop app](https://github.com/truongdd03/eShop). Admin can use this website to update new menu and receive orders from customers.
+EShopManager is used to manage [the eShop app](https://github.com/truongdd03/eShop). Admin can use this website to update new menus and receive orders from customers. Thanks to Firebase Storage, Firebase Authentication, and Realtime Database, all changes made by admin will show immediately on customers' phones.
 
 ## User Stories
 
@@ -8,9 +8,9 @@ The following required functionality is completed:
 
 * Authentication
   - [x] Admin has to sign in to make changes.
-  - [x] The website can send reset-password email.
+  - [x] Send reset-password emails.
   - [x] A logout button.
-  - [x] The website will automatically login if admin hasn't logged out.
+  - [x] Remember user: the website will be automatically logged in if the admin hasn't logged out.
 
 * Menu Page
   - [x] Contains a date-picker to choose the specific menu. 
@@ -18,7 +18,7 @@ The following required functionality is completed:
   - [x] All the menus will be updated immediately on customers' apps even if there is only a small change.
 
 * Orders Page
-  - [x] Shows all orders in real time.
+  - [x] Shows all orders in real-time.
   - [x] Alert when there is a new order.
   - [x] Has two buttons to update the order's status.
 
@@ -28,8 +28,8 @@ The following required functionality is completed:
   - [x] Rank customers based on the number of orders they have made.
 
 * Add Dish Page
-  - [x] Shows all dishes that the restaurant have.
-  - [x] Make it easier for admin to find dish by adding search bar.
+  - [x] Shows all dishes of the restaurant.
+  - [x] Make it easier to find dishes by adding a search bar.
   - [x] Contains an add button. The added dish, include name, price, course type, and image, will be stored on Firebase.
   - [x] Admin can remove any dish by clicking its delete button.
 
