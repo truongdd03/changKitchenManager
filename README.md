@@ -34,3 +34,4 @@ The following required functionality is completed:
   - [x] Admin can remove any dish by clicking its delete button.
 
 ## Video Walkthrough
+![](demo.gif)
