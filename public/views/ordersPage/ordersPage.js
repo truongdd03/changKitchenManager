@@ -25,6 +25,7 @@ function checkOrder(order, quantity) {
 
 function fetchOrders(callback) {
     ref.child('orderStatus').on('value', function(snapshot) {
+        var hasChanged = false;
         snapshot.forEach(function(order) {
             var detail = order.val();
             var orderDishes = [];
@@ -38,6 +39,10 @@ function fetchOrders(callback) {
         
             var newOrder = new Order(detail['id'], detail['pickUpTime'], detail['status'], detail['total'], detail['uid'], orderDishes);
             if (!isExisted(newOrder) && checkOrder(newOrder, detail['quantity'])) {
+                if (!hasChanged) {
+                    window.alert("New order!");
+                    hasChanged = true;
+                }
                 listOfOrders.push(newOrder);
             }
         })
@@ -51,6 +56,14 @@ function resetOrdersWrapper() {
     while (wrapper.firstChild) {
         wrapper.removeChild(wrapper.firstChild);
     }
+}
+
+function findDate(pickUpTime) {
+    var tmp = pickUpTime[4] + pickUpTime[5];
+    for (i = 0; i < 4; ++i) {
+        tmp += pickUpTime[i];
+    }
+    return tmp;
 }
 
 function loadOrders() {
