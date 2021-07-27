@@ -1,6 +1,6 @@
-# eShopManager
+# Chang's Kitchen Manager
 
-EShopManager is used to manage [the eShop app](https://github.com/truongdd03/eShop). Admin can use this website to update new menus and receive orders from customers. Thanks to Firebase Storage, Firebase Authentication, and Realtime Database, all changes made by admin will show immediately on customers' phones.
+Chang's Kitchen Manager is used to manage [the Chang's Kitchen app](https://github.com/truongdd03/changKitchen). Admin can use this website to update new menus and receive orders from customers. Thanks to Firebase Storage, Firebase Authentication, and Realtime Database, all changes made by admin will show immediately on customers' phones.
 
 ## User Stories
 
